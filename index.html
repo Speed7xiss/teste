@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Conversa — interface de comunidade inspirada em fóruns modernos">
+<title>Conversa — Comunidade</title>
+<link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">C</span><span>conversa</span></a>
+  <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Pesquisar na comunidade" autocomplete="off"></label>
+  <div class="top-actions"><button class="icon-btn">♢</button><button class="login-btn" id="loginBtn">Entrar</button><button class="profile-btn"><span class="avatar small">J</span><span class="profile-name">júnior</span><span>⌄</span></button></div>
+</header>
+<main class="layout">
+<aside class="sidebar">
+  <div class="side-title">NAVEGAÇÃO</div>
+  <a class="nav active" href="#"><span>⌂</span>Início</a><a class="nav" href="#"><span>◉</span>Popular</a><a class="nav" href="#"><span>☆</span>Explorar</a><a class="nav" href="#"><span>▣</span>Comunidades</a>
+  <div class="divider"></div><div class="side-title">SUAS COMUNIDADES</div>
+  <a class="community" href="#"><span class="community-icon">R</span>r/tecnologia</a><a class="community" href="#"><span class="community-icon purple">G</span>r/games</a><a class="community" href="#"><span class="community-icon green">C</span>r/programacao</a><a class="community" href="#"><span class="community-icon orange">M</span>r/memes</a>
+  <button class="see-more">Ver todas</button>
+</aside>
+<section class="feed">
+  <div class="feed-head"><div><p class="eyebrow">COMUNIDADE</p><h1>r/conversa</h1><p class="muted">Um espaço para conversar, compartilhar e descobrir coisas novas.</p></div><button class="create-btn" id="createBtn">＋ Criar publicação</button></div>
+  <div class="tabs"><button class="tab active">🔥 Em alta</button><button class="tab">✨ Novos</button><button class="tab">★ Mais votados</button></div>
+  <div id="posts">
+    <article class="post"><div class="vote"><button class="vote-btn up">▲</button><strong>1,2 mil</strong><button class="vote-btn down">▼</button></div><div class="post-body"><div class="post-meta"><span class="avatar">T</span><b>u/tecnobr</b><span>·</span><span>há 2 h</span><span>·</span><span>r/tecnologia</span></div><h2>Qual tecnologia vocês acham que vai mudar mais nossas vidas nos próximos anos?</h2><p class="post-text">Estou curioso para saber o que a comunidade pensa. IA, realidade aumentada, robótica ou alguma coisa que ainda nem imaginamos?</p><div class="post-actions"><button>♡ 184 comentários</button><button>↗ Compartilhar</button><button>⋯ Mais</button></div></div></article>
+    <article class="post"><div class="vote"><button class="vote-btn up">▲</button><strong>846</strong><button class="vote-btn down">▼</button></div><div class="post-body"><div class="post-meta"><span class="avatar purple">L</span><b>u/leo_dev</b><span>·</span><span>há 5 h</span><span>·</span><span>r/programacao</span></div><h2>Terminei meu primeiro projeto web do zero 🚀</h2><p class="post-text">Depois de algumas semanas estudando, finalmente consegui colocar o projeto no ar. Ainda tem muito para melhorar, mas fiquei feliz com o resultado.</p><div class="code-card"><span>project/</span><span>├── index.html</span><span>├── src/</span><span>│   ├── styles.css</span><span>│   └── app.js</span><span>└── README.md</span></div><div class="post-actions"><button>♡ 92 comentários</button><button>↗ Compartilhar</button><button>⋯ Mais</button></div></div></article>
+    <article class="post"><div class="vote"><button class="vote-btn up">▲</button><strong>523</strong><button class="vote-btn down">▼</button></div><div class="post-body"><div class="post-meta"><span class="avatar orange">M</span><b>u/marcos</b><span>·</span><span>há 8 h</span><span>·</span><span>r/games</span></div><h2>Qual foi o último jogo que realmente prendeu a atenção de vocês?</h2><p class="post-text">Vale qualquer plataforma. Quero encontrar alguma coisa nova para jogar no fim de semana.</p><div class="post-actions"><button>♡ 76 comentários</button><button>↗ Compartilhar</button><button>⋯ Mais</button></div></div></article>
+  </div>
+</section>
+<aside class="rightbar">
+  <div class="card community-card"><div class="cover"></div><div class="community-heading"><span class="community-logo">C</span><div><h3>r/conversa</h3><span class="muted">Comunidade</span></div></div><p>Converse sobre tecnologia, jogos, programação, ideias e tudo que você quiser compartilhar.</p><div class="stats"><div><b>128 mil</b><span>Membros</span></div><div><b>2,4 mil</b><span>Online</span></div></div><button class="join-btn" id="joinBtn">Entrar na comunidade</button></div>
+  <div class="card rules"><h3>Regras da comunidade</h3><div><b>1</b><span>Seja respeitoso</span></div><div><b>2</b><span>Publique conteúdo relevante</span></div><div><b>3</b><span>Não faça spam</span></div><div><b>4</b><span>Divirta-se</span></div></div>
+</aside>
+</main>
+<div class="modal hidden" id="modal"><div class="modal-box"><button class="close" id="closeModal">×</button><p class="eyebrow">NOVA PUBLICAÇÃO</p><h2>Criar publicação</h2><input id="newTitle" placeholder="Título da publicação"><textarea id="newBody" placeholder="Escreva o que você quer compartilhar..."></textarea><div class="modal-footer"><span class="muted">Interface demonstrativa</span><button class="create-btn" id="publishBtn">Publicar</button></div></div></div>
+<div class="toast" id="toast" role="status"></div>
+<script src="src/app.js"></script>
+</body></html>
